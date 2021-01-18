@@ -206,6 +206,7 @@ local descs = {}
 	settings.ChatCommands = true 		-- If false you will not be able to run commands via the chat; Instead you MUST use the console or you will be unable to run commands
 	settings.CreatorPowers = true		-- Gives me creator level admin; This is strictly used for debugging; I can't debug without full access to the script
 	settings.CodeExecution = true		-- Enables the use of code execution in Adonis; Scripting related and a few other commands require this
+	settings.DefaultMusicList = true	-- Enables the use of the default music list in Adonis
 	
 	settings.BanMessage = "Banned"				-- Message shown to banned users
 	settings.LockMessage = "Not Whitelisted"	-- Message shown to people when they are kicked while the game is :slocked
@@ -332,6 +333,7 @@ local descs = {}
 	descs.MaxLogs = [[ Maximum logs to save before deleting the oldest; Too high can lag the game ]]
 	descs.Notification = [[ Whether or not to show the "You're an admin" and "Updated" notifications ]]
 	descs.CodeExecution = [[ Enables the use of code execution in Adonis; Scripting related and a few other commands require this ]]
+	descs.DefaultMusicList = [[ Enables the use of the default music list in Adonis ]]
 	descs.SongHint = [[ Display a hint with the current song name and ID when a song is played via :music ]]
 	
 	descs.AutoClean = [[ Will auto clean service.Workspace of things like hats and tools ]]
