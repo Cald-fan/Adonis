@@ -157,7 +157,22 @@ local CleanUp = function()
 		pcall(service.Delete,server.Core.RemoteEvent.Decoy1)
 		pcall(service.Delete,server.Core.RemoteEvent.Decoy2)
 	end
+	if server.Variables.WebPanel_Initiated then
+		local HTTP = game:GetService("HttpService")
+		local success, res = pcall(HTTP.RequestAsync, HTTP, {
+			Url = "https://robloxconnection.adonis.dev/remove";
+			Method = "DELETE";
+			Headers = {
+				["api-key"] = server.Settings.WebPanel_ApiKey,
+				["Content-Type"] = "application/json"
+			};
+			Body = HTTP:JSONEncode({
+				["JobId"] = game.JobId
+			})
+		});
+	end
 	warn'Unloading complete'
+	wait(4)
 end;
 
 server = {
